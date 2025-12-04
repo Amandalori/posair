@@ -1,0 +1,19 @@
+{
+    "name": "POS Air",
+    "short_name": "POS Air",
+    "description": "PWA POS system",
+    "start_url": "/posair/",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "/posair/icons/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/posair/icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
