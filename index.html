@@ -21,7 +21,7 @@
   --secondary-color-light: #6476d1; /* Light Orange */
   --accent-color-light: #524de8; /* Orange */
   --success-color-light: #524de8; /* Orange */
-  --danger-color-light: #E02840; /* Red */
+  --danger-color-light: #e02828; /* Red */
   --warning-color: #F09F34; /* Orange, consistent across modes */
   --info-color: #524de8; /* Blue for Bluetooth */
   --text-color-light: #4e515e; /* Greyish sub-text */
@@ -37,7 +37,7 @@
   --secondary-color-dark: #CF7903; /* Light Orange */
   --accent-color-dark: #F09F34; /* Orange */
   --success-color-dark: #F09F34; /* Orange */
-  --danger-color-dark: #E02840; /* Red */
+  --danger-color-dark: #e02828; /* Red */
   --text-color-dark: #B0B0B0; /* Light Gray */
   --text-emphasis-dark: #FFFFFF; /* White */
   --bg-color-dark: #0f0e0e;
@@ -357,7 +357,7 @@ body.akmlight-mode {
   gap: 15px;
   margin-bottom: 15px;
 }
-.akmstat-card, akmstat-card2{
+.akmstat-card {
   display: flex;
   flex-direction: column;
   padding: 15px;
@@ -1303,7 +1303,7 @@ body.akmdark-mode input[type="datetime-local"]::-webkit-calendar-picker-indicato
       
       </div> 
      </div> 
-    </section> 
+    </section>  
     <section id="orders-section" class="akmcontent-section" style="display: none;"> 
      <div class="akmrow"> 
       <div class="akmcol-md-8 akmcol-sm-12"> 
@@ -1655,11 +1655,11 @@ body.akmdark-mode input[type="datetime-local"]::-webkit-calendar-picker-indicato
         <li>Customizable settings including tax rates and receipt branding</li>
         <li>Multi-language support for diverse teams</li>
        </ul> 
-       <h3>Developer : </h3> 
-       <p> Aung Kaung Myat (Founder of Amandalori) </p>
-        
+       <h3>Founder : </h3> 
+       <p> Aung Kaung Myat (Owned 50%) </p>
+       <p> Soe Wai Yan Htet (Owned 50%) </p> 
        <h3>Contact:</h3>
-       <a href="viber://chat?number=%2B959770605933" class="akm-viber-btn">
+       <a href="viber://chat?number=%2B959788464562" class="akm-viber-btn">
           <i class="fab fa-viber"></i> Contact via Viber
        </a>
       </div> 
@@ -1878,7 +1878,7 @@ body.akmdark-mode input[type="datetime-local"]::-webkit-calendar-picker-indicato
         </div>
     </div>
   </div>
-<script type="text/javascript">
+<script type="text/javascript" id="dcoder_script">
 document.addEventListener('DOMContentLoaded', () => {
     // --- START: Activation Code Logic (Two-Tier, Date-Based) ---
     const activationModal = document.getElementById('activation-modal');
@@ -1891,7 +1891,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Constants
     const TRIAL_DAYS = 30;
-    const EXPIRED_MESSAGE_MY = "အစမ်းသုံးကာလပြီးဆုံးသွားပြီဖြစ်ပါသည်။ အမြဲတန်းသုံးဝယ်ယူလိုပါက Viberနံပါတ် 09770605933ထံ ဆက်သွယ်ပြီး Applicationအတွက် activate codeကို ဝယ်ယူရရှိနိုင်ပါသည်။ အသုံးပြုတဲ့အတွက် ကျေးဇူးအထူးတင်ရှိပါသည်။";
+    const EXPIRED_MESSAGE_MY = "အစမ်းသုံးကာလပြီးဆုံးသွားပြီဖြစ်ပါသည်။ အမြဲတန်းသုံးဝယ်ယူလိုပါက Viberနံပါတ် 09788464562ထံ ဆက်သွယ်ပြီး Applicationအတွက် activate codeကို ဝယ်ယူရရှိနိုင်ပါသည်။ အသုံးပြုတဲ့အတွက် ကျေးဇူးအထူးတင်ရှိပါသည်။";
     const INITIAL_MESSAGE_EN = "Please enter the activation code to start your 30-day trial.";
 
     // Logic: Code = (YYYYMMDD as int) * Day(DD)
@@ -1997,7 +1997,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- END: Activation Code Logic ---
 
     function initializeApp() {
-        const DB_NAME = 'POS_air';
+        const DB_NAME = 'a&s_beta';
         const DB_VERSION = 1; 
         let dbInstance;
         let itemToDelete = null;
@@ -2452,7 +2452,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </tr>
             `).join('');
         }
-        
+
         async function renderStockPage() {
             const [stock, products] = await Promise.all([ db.getAll('stock'), db.getAll('products')]);
             
@@ -2932,7 +2932,7 @@ document.addEventListener('DOMContentLoaded', () => {
             stat_net_profit: { en: "Net Profit", mm: "အသားတင်အမြတ်", jp: "純利益" },
             title_completed_sales: { en: "Completed Sales ({count})", mm: "ပြီးမြောက်သောအရောင်းများ ({count})", jp: "完了した販売 ({count})" },
             title_purchases_made: { en: "Purchases Made ({count})", mm: "ပြုလုပ်ခဲ့သော အဝယ်များ ({count})", jp: "行われた仕入れ ({count})" },
-            title_top_selling_products: { en: "Top 7 Selling Products", mm: "အရောင်းရဆုံး ပစ္စည်း (၇) မျိုး", jp: "トップ7販売製品" },
+            title_top_selling_products: { en: "Top 5 Selling Products", mm: "အရောင်းရဆုံး ပစ္စည်း (၅) မျိုး", jp: "トップ5販売製品" },
             table_quantity_sold: { en: "Quantity Sold", mm: "ရောင်းရအရေအတွက်", jp: "販売数量" },
             table_revenue: { en: "Revenue", mm: "ရောင်းရငွေ", jp: "収益" },
             month_names: {
@@ -3940,7 +3940,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const topSellingProducts = Array.from(productSales.entries())
                 .sort(([, qtyA], [, qtyB]) => qtyB - qtyA)
-                .slice(0, 7)
+                .slice(0, 5) // MODIFICATION: Change to Top 5
                 .map(([productId, quantity]) => {
                     const product = allProducts.find(p => p.id === productId);
                     return {
@@ -3954,7 +3954,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         function renderReportModal(data) {
             state.reportData = data;
-            const { dateTitle, totalRevenue, totalCost, netProfit, sales, purchases, topSellingProducts } = data;
+            const { dateTitle, totalRevenue, totalCost, netProfit, sales, topSellingProducts } = data; // purchases removed from destructuring
             document.getElementById('report-date-title').textContent = dateTitle;
             const contentEl = document.getElementById('report-content');
             
@@ -3973,13 +3973,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </table>
                 </div>
 
-                <h4 style="margin-top: 20px;">${getTranslation('title_purchases_made', { count: purchases.length })}</h4>
-                <div class="akmtable-responsive" style="max-height: 200px;">
-                    <table class="akmtable">
-                        <thead><tr><th>Product</th><th>Qty</th><th>Total Cost</th></tr></thead>
-                        <tbody>${purchases.length ? purchases.map(p => `<tr><td>${p.productName}</td><td>${p.quantity}</td><td>${formatCurrency(p.totalCost)}</td></tr>`).join('') : `<tr><td colspan="3" class="akm-text-center">No purchases.</td></tr>`}</tbody>
-                    </table>
-                </div>
+                <!-- MODIFICATION: Purchases Made section removed -->
 
                 <h4 style="margin-top: 20px;">${getTranslation('title_top_selling_products')}</h4>
                 <div class="akmrow">
@@ -4011,6 +4005,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const quantities = data.map(p => p.quantity);
             const style = getComputedStyle(document.body);
             const textColor = style.getPropertyValue('--text-emphasis').trim();
+            
+            // MODIFICATION: Changed colors to red, blue, green, yellow, pink
+            const customColors = ['#e02828', '#524de8', '#F0F2F5', '#F09F34', '#6476d1']; 
 
             topProductsPieChart = new Chart(ctx, {
                 type: 'pie',
@@ -4019,7 +4016,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     datasets: [{
                         label: getTranslation('table_quantity_sold'),
                         data: quantities,
-                        backgroundColor: ['#ff8839', '#ff9e5e', '#eb843f', '#E63946', '#FFA500', '#4e515e', '#26211c'],
+                        backgroundColor: customColors.slice(0, data.length), // Use only as many colors as data points
                         borderColor: style.getPropertyValue('--glass-bg').trim(),
                         borderWidth: 2
                     }]
@@ -4079,7 +4076,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function handleExportReportCSV() {
             if (!state.reportData) return;
-            const { dateTitle, totalRevenue, totalCost, netProfit, sales, purchases, topSellingProducts } = state.reportData;
+            const { dateTitle, totalRevenue, totalCost, netProfit, sales, topSellingProducts } = state.reportData; // purchases removed
             
             let csvContent = "data:text/csv;charset=utf-8,";
             
@@ -4095,10 +4092,7 @@ document.addEventListener('DOMContentLoaded', () => {
             sales.forEach(s => csvContent += `#${s.id.slice(-5)},"${new Date(s.dateTime).toLocaleString()}",${s.items.length},${s.total}\n`);
             csvContent += `\n`;
 
-            csvContent += `Purchases\n`;
-            csvContent += `Product Name,Quantity,Total Cost\n`;
-            purchases.forEach(p => csvContent += `"${p.productName}",${p.quantity},${p.totalCost}\n`);
-            csvContent += `\n`;
+            // Removed Purchases CSV export from Report Modal logic
 
             csvContent += `Top Selling Products\n`;
             csvContent += `Product Name,Quantity Sold\n`;
